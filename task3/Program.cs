@@ -21,16 +21,41 @@
             //}
             #endregion
             #region duplicate detector
-            int[] prices = { 9888, 9898, 123, 56, 23, 87 };
-            bool isDuplicate = false;
-            for (int i = 1; i < prices.Length; i++)
+            //int[] prices = { 9888, 9898, 123, 56, 23, 87 };
+            //bool isDuplicate = false;
+            //for (int i = 1; i < prices.Length; i++)
+            //{
+            //    if (prices[i] == prices[i - 1])
+            //        isDuplicate = true;
+            //}
+            //if (isDuplicate)
+            //    Console.WriteLine("array daxilinde duplicate var");
+            //else { Console.WriteLine("duplicate yoxdur"); }
+            #endregion
+            #region subset detector
+            int[] prices = { 9888, 123, 56, 23, 87 };
+            int[] discounts = { 56, 123, 4, 23, 87, 9888 };
+            bool isSubset = true;
+            for (int i = 0; i < prices.Length; i++)
             {
-                if (prices[i] == prices[i - 1])
-                    isDuplicate = true;
+                for (int j = 0; j < discounts.Length; j++)
+                {
+                    if (prices[i] == discounts[j])
+                    {
+                        isSubset = true;
+                        break;
+                    }
+                    else if (prices[i] != discounts[j])
+                        isSubset = false;
+                }
+                if (isSubset == false) { break; }
             }
-            if (isDuplicate)
-                Console.WriteLine("array daxilinde duplicate var");
-            else { Console.WriteLine("duplicate yoxdur"); }
+            if (isSubset == true)
+            {
+                Console.WriteLine("Prices array is subset of discounts array");
+            }
+            else
+                Console.WriteLine("Prices array is not subset of discounts array");
             #endregion
         }
     }
