@@ -5,8 +5,13 @@
         static void Main(string[] args)
         {
             #region ters array
-            //int[] numbers = { 2, 5, 8, 9 };
+            //int[] numbers = { 2, 5,9, 8, 9 };
             //int temp = 0;
+            //Console.WriteLine("Array: ");
+            //for (int k = 0; k < numbers.Length; k++)
+            //{
+            //    Console.WriteLine(numbers[k]);
+            //}
             //for (int i = 0; i < numbers.Length / 2; i++)
             //{
             //    temp = numbers[i];
@@ -15,13 +20,14 @@
 
 
             //}
+            //Console.WriteLine("array after change: ");
             //for (int j = 0; j < numbers.Length; j++)
             //{
             //    Console.WriteLine(numbers[j]);
             //}
             #endregion
             #region duplicate detector
-            //int[] prices = { 9888, 9898, 123, 56, 23, 87 };
+            //int[] prices = { 9888, 9888, 123, 56, 23, 87 };
             //bool isDuplicate = false;
             //for (int i = 1; i < prices.Length; i++)
             //{
@@ -33,8 +39,8 @@
             //else { Console.WriteLine("duplicate yoxdur"); }
             #endregion
             #region subset detector
-            int[] prices = { 9888, 123, 56, 23, 87 };
-            int[] discounts = { 56, 123, 4, 23, 87, 9888 };
+            int[] prices = { 5,5 };
+            int[] discounts = { 5 };
             bool isSubset = true;
             for (int i = 0; i < prices.Length; i++)
             {
